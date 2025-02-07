@@ -105,17 +105,17 @@ public class GestorJuegos {
         int juegosRegistrados = 0;
 
         //comprobamos que las longitudes de los arrays sean iguales
-        if (codigos.length != unidadesPorCodigo.length) {
+        if (codigos.length != unidadesPorCodigo.length && codigos.length > 0) {
             return -1;
         }
 
         //Comprobamos que los valores de cantidad sean positivos y sino, la sumamos a cantidadTotal
         int cantidadTotal = 0;
-        for (int cantidad : unidadesPorCodigo) {
-            if (cantidad < 0) {
+        for (int i = 0; i < unidadesPorCodigo.length; i++) {
+            if (unidadesPorCodigo[i] < 0) {
                 return -2;
             } else {
-                cantidadTotal += cantidad;
+                cantidadTotal += unidadesPorCodigo[i];
             }
         }
 
