@@ -104,8 +104,8 @@ public class GestorJuegos {
     public int registrarLoteJuegos(String[] codigos, int[] unidadesPorCodigo) {
         int juegosRegistrados = 0;
 
-        //comprobamos que las longitudes de los arrays sean iguales
-        if (codigos.length != unidadesPorCodigo.length && codigos.length > 0) {
+        //comprobamos que las longitudes de los arrays sean iguales y mayores a 0
+        if (codigos.length != unidadesPorCodigo.length || codigos.length > 0) {
             return -1;
         }
 
